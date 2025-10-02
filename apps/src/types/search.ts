@@ -26,4 +26,3 @@ export type SearchDoc = z.infer<typeof SearchDocSchema>;
 // Reusable option lists derived from enums
 export const PRODUCTS = ProductEnum.options;
 export const CHANNELS = ChannelEnum.options;
-

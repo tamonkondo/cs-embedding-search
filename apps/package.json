@@ -12,6 +12,8 @@
   "dependencies": {
     "@xenova/transformers": "^2.17.2",
     "next": "15.5.3",
+    "next-intl": "^4.3.9",
+    "next-themes": "^0.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "zod": "^4.1.7"

@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "カスタマーサポート検索",
+    "description": "OpenAI ベクター検索と通常検索を切り替えて体験できます。"
+  },
+  "search": {
+    "placeholder": "例: カード 使えない / 支払い 失敗",
+    "toggleFull": "通常検索",
+    "toggleVector": "ベクター検索",
+    "toggleAria": "検索モードを切り替える",
+    "productAll": "製品: すべて",
+    "channelAll": "チャネル: すべて",
+    "productLabel": "製品フィルター",
+    "channelLabel": "チャネルフィルター",
+    "manualTrigger": "検索を実行",
+    "clearInput": "入力をクリア"
+  },
+  "results": {
+    "loading": "検索中…（過去の結果はそのまま表示）",
+    "empty": "一致する結果がありません。キーワードやモードを変えてみてください。",
+    "error": "検索に失敗しました。時間をおいて再度お試しください。",
+    "listLabel": "検索結果一覧",
+    "itemDescription": "{product}・{channel}・更新: {date}"
+  },
+  "preview": {
+    "title": "プレビュー",
+    "metricsLabel": "通常 p95: {full} / ベクター p95: {vector}",
+    "loading": "プレビューを読み込んでいます…",
+    "noSelection": "検索結果を選択すると詳細が表示されます。",
+    "metaSource": "ソース: {source}",
+    "metaProduct": "製品: {product}",
+    "metaChannel": "チャネル: {channel}",
+    "metaUpdated": "最終更新: {date}",
+    "tipSearch": "Enter で検索、Esc で入力クリア（実装対象）",
+    "tipShortcut": "ショートカット: ⌘/Ctrl + K でフォーカス（実装対象）"
+  },
+  "footer": {
+    "description": "通常/ベクターのトグル、ハイライト、フィルタ、p95 表示までをモックで体験できます。バックエンド実装後は fetch を差し替えるだけで完成形になります。",
+    "skipToResults": "検索結果へスキップ"
+  }
+}

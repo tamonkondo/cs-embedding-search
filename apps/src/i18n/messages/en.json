@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "title": "Customer Support Search",
+    "description": "Explore traditional and vector search powered by OpenAI embeddings."
+  },
+  "search": {
+    "placeholder": "e.g. card declined / payment failed",
+    "toggleFull": "Keyword search",
+    "toggleVector": "Vector search",
+    "toggleAria": "Toggle search mode",
+    "productAll": "Product: All",
+    "channelAll": "Channel: All",
+    "productLabel": "Filter by product",
+    "channelLabel": "Filter by channel",
+    "manualTrigger": "Run search",
+    "clearInput": "Clear input"
+  },
+  "results": {
+    "loading": "Searching… (showing previous results)",
+    "empty": "No matches found. Try changing the query or mode.",
+    "error": "Search failed. Please try again shortly.",
+    "listLabel": "Search results",
+    "itemDescription": "{product} · {channel} · Updated: {date}"
+  },
+  "preview": {
+    "title": "Preview",
+    "metricsLabel": "Full p95: {full} / Vector p95: {vector}",
+    "loading": "Loading preview…",
+    "noSelection": "Select a result to view its details here.",
+    "metaSource": "Source: {source}",
+    "metaProduct": "Product: {product}",
+    "metaChannel": "Channel: {channel}",
+    "metaUpdated": "Updated: {date}",
+    "tipSearch": "Press Enter to search, Esc to clear (to be implemented)",
+    "tipShortcut": "Shortcut: ⌘/Ctrl + K to focus (to be implemented)"
+  },
+  "footer": {
+    "description": "Experience toggling between traditional and vector modes with highlighting, filters and latency metrics. Replace fetch calls with your backend to go live.",
+    "skipToResults": "Skip to search results"
+  }
+}
