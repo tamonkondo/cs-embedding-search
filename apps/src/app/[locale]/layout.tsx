@@ -11,7 +11,7 @@ import { type Locale, locales } from "../../i18n/config";
 
 type Props = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
@@ -19,10 +19,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   if (!locales.includes(locale as Locale)) {
     notFound();
   }
@@ -33,10 +34,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function LocaleLayout({
-  children,
-  params: { locale },
-}: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
   if (!locales.includes(locale as Locale)) {
     notFound();
   }
