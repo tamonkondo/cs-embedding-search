@@ -74,13 +74,14 @@ async function main() {
   knowledgeUnitIds.forEach((id, index) => {
     const row = rowsById.get(id);
     if (row) {
+      // rowの型がanyであることを明示し、プロパティアクセスの型エラーを回避
+      const r = row as { title?: string; snippet?: string };
       console.log(
-        `${index + 1}. ${row.title}\n   ${row.snippet?.replace(/\s+/g, " ") ?? "(no snippet)"}\n`,
+        `${index + 1}. ${r.title ?? "(no title)"}\n   ${r.snippet ? r.snippet.replace(/\s+/g, " ") : "(no snippet)"}\n`,
       );
     }
   });
 }
-
 main().catch((err) => {
   console.error(err);
   process.exit(1);
