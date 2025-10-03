@@ -8,6 +8,11 @@
   - Next.js UI からモード切替／フィルタ／プレビューを統合し、結果の詳細を即座に参照可能にした。
 - **対応範囲**: C1–C8 の各カードを実装し、ダミーデータ投入〜UI 改修まで一貫した E2E 動線を整備。
 
+## フォルダ構成
+- **apps/**: Next.js 製の UI・API 群をまとめる領域。実動しているのは `apps/src/` で、App Router 配下に検索画面・プレビュー・テーマ設定・`/api/search` と `/api/vector-search` のエッジ関数を実装している。
+- **scripts/**: ベクター検索パイプラインを運用する単発ツール置き場。`seed.ts` がダミーデータ投入、`make-embeddings-openai.ts` が OpenAI 埋め込みを生成、`test-faiss-query-openai.ts` が E2E 動作確認、`check-faiss-id.ts` がインデックスと DB の ID 整合性チェックを行う。
+- **services/**: 機械学習系のバックエンドを集約する Python レイヤー。`services/faiss/` では FastAPI サーバ (`server.py`) とインデックスビルダー (`build_index.py`) を提供し、`embeddings.jsonl` を取り込んで `index/` 以下に最終成果物 `support.idx`（FAISS バイナリインデックス）と `support.idx.ids`（行番号→ドキュメント ID の対応表）を生成・保持する。
+
 ---
 
 ## 設計 — Next.js + OpenAI + FAISS を選んだ理由
@@ -87,4 +92,3 @@ pnpm tsx scripts/test-faiss-query-openai.ts "支払い 失敗"
 # Next.js Dev
 cd apps && pnpm dev
 ```
-

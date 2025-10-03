@@ -64,9 +64,6 @@ export default function HomePage() {
           pending={pending}
         />
       </main>
-      <footer className="mx-auto max-w-6xl p-4 text-xs text-muted-foreground">
-        {t("description")}
-      </footer>
     </div>
   );
 }

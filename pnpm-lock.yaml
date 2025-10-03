@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@types/node':
+        specifier: ^24.6.2
+        version: 24.6.2
       openai:
         specifier: ^6.0.1
         version: 6.0.1
@@ -180,6 +183,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@types/node@24.6.2':
+    resolution: {integrity: sha512-d2L25Y4j+W3ZlNAeMKcy7yDsK425ibcAOO2t7aPTz6gNMH0z2GThtwENCDc0d/Pw9wgyRqE5Px1wkV7naz8ang==}
+
   dotenv@17.2.3:
     resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
     engines: {node: '>=12'}
@@ -271,6 +277,9 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
+  undici-types@7.13.0:
+    resolution: {integrity: sha512-Ov2Rr9Sx+fRgagJ5AX0qvItZG/JKKoBRAVITs1zk7IqZGTJUwgUr7qoYBpWwakpWilTZFM98rG/AFRocu10iIQ==}
+
   xtend@4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
     engines: {node: '>=0.4'}
@@ -354,6 +363,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.10':
     optional: true
+
+  '@types/node@24.6.2':
+    dependencies:
+      undici-types: 7.13.0
 
   dotenv@17.2.3: {}
 
@@ -450,5 +463,7 @@ snapshots:
       get-tsconfig: 4.10.1
     optionalDependencies:
       fsevents: 2.3.3
+
+  undici-types@7.13.0: {}
 
   xtend@4.0.2: {}
