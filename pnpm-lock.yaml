@@ -15,6 +15,9 @@ importers:
         specifier: ^8.16.3
         version: 8.16.3
     devDependencies:
+      dotenv:
+        specifier: ^17.2.3
+        version: 17.2.3
       tsx:
         specifier: ^4.20.6
         version: 4.20.6
@@ -176,6 +179,10 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  dotenv@17.2.3:
+    resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
+    engines: {node: '>=12'}
 
   esbuild@0.25.10:
     resolution: {integrity: sha512-9RiGKvCwaqxO2owP61uQ4BgNborAQskMR6QusfWzQqv7AZOg5oGehdY2pRJMTKuwxd1IDBP4rSbI5lHzU7SMsQ==}
@@ -347,6 +354,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.10':
     optional: true
+
+  dotenv@17.2.3: {}
 
   esbuild@0.25.10:
     optionalDependencies:

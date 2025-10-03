@@ -5,7 +5,8 @@ import { embed } from "../../../lib/embed";
 import type { SearchDoc } from "../../../types/search";
 
 export const runtime = "nodejs";
-
+export const dynamic = "force-dynamic"; 
+export const revalidate = 0;  
 const FAISS_URL = process.env.FAISS_URL || "http://127.0.0.1:8000";
 
 type VectorSearchPayload = {
