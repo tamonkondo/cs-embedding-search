@@ -23,7 +23,7 @@ export default function ResultItem({
   const metaDescription = t("itemDescription", {
     product: doc.product,
     channel: doc.channel,
-    date: new Date(doc.updated_at).toLocaleString(),
+    date: new Date(doc.updated_at).toLocaleString("ja-JP"),
   });
   const titleParts = highlightParts(doc.title, query);
   const bodyParts = highlightParts(doc.body, query);
@@ -64,7 +64,7 @@ export default function ResultItem({
           </span>
           <span>{doc.product}</span>
           <span>•</span>
-          <span>{new Date(doc.updated_at).toLocaleString()}</span>
+          <span>{new Date(doc.updated_at).toLocaleString("ja-JP")}</span>
         </div>
         <h3 className="font-medium leading-tight">
           {titleParts.map((part) => (
